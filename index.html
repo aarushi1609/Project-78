@@ -1,0 +1,48 @@
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>
+        Project 78
+    </title>
+</head>
+<body>
+    <h1> My Family Book </h1>
+    <img src="91zbi9M+mKL.jpg"  style="width: 30%;" id=family_member_image>
+    <h4 id=family_member_name></h4>
+    <button onclick="update();">Next</button>
+
+    <script>
+        
+        var images=
+        [
+        "mom.jpg" ,
+        "https://cdn.dribbble.com/users/1224589/screenshots/12186706/media/1183c6ba892333ba52605757318b3c88.jpg?compress=1&resize=400x300",
+        "https://media.istockphoto.com/vectors/two-happy-smiling-girlfriends-give-five-at-success-work-vector-id1207698946?s=612x612",
+        "https://media.istockphoto.com/vectors/beautiful-woman-avatar-character-icon-vector-id1221688918?s=612x612"
+        ]
+
+        var names =
+        [
+            "Shraddha Vora (Mom)",
+            "Suneel Vora (Dad)",
+            "Shanaya Vora (Sister)",
+            "Aarushi Vora (Me)"
+        ]
+
+        var i= 0;
+        function update()
+        {
+            i++;
+            if(i > 3)
+            {
+               i=0;
+            }
+            var updated_images = images[i];
+            var updated_names = names[i];
+            document.getElementById("family_member_image").src= updated_images;
+            document.getElementById("family_member_name").innerHTML= updated_names;
+        }
+    
+       </script>
+</body>
+</html>
